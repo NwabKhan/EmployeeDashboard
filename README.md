@@ -247,4 +247,3 @@ This project is created for demonstration purposes as part of a technical assess
 
 ---
 
-*Built with ❤️ using React, Tailwind CSS, and modern web technologies.*

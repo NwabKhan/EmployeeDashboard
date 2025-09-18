@@ -64,7 +64,7 @@ const AttendanceChart = ({ attendanceData }) => {
 
     return {
       pieData,
-      totalDays: sortedData.length,
+      totalDays: sortedData.length || 0,
       presentDays: statusCounts.present || 0,
       absentDays: (statusCounts.absent || 0) + (statusCounts.leave || 0),
       lateDays: statusCounts.late || 0,
@@ -73,17 +73,17 @@ const AttendanceChart = ({ attendanceData }) => {
         year: 'numeric',
         month: 'short',
         day: 'numeric'
-      }),
+      }) || "",
       endDate: now.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'short',
         day: 'numeric'
-      })
+      }) || ""
     };
   }, [attendanceData, dateRange]);
 
   if (!attendanceData) {
-    return <Loader />;
+    return "No Data Found";
   }
 
   const getStatusColor = (status) => {
@@ -97,8 +97,8 @@ const AttendanceChart = ({ attendanceData }) => {
     }
   };
 
-  const attendanceRate = chartData.totalDays > 0 ?
-    ((chartData.presentDays / chartData.totalDays) * 100).toFixed(1) : '0.0';
+  const attendanceRate = chartData?.totalDays > 0 ?
+    ((chartData?.presentDays / chartData?.totalDays) * 100).toFixed(1) : '0.0';
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
@@ -116,7 +116,6 @@ const AttendanceChart = ({ attendanceData }) => {
     return null;
   };
 
-  console.log("chartDate: ", chartData);
   return (
     <div className="space-y-6">
       {/* Date Range Selector */}
@@ -124,7 +123,7 @@ const AttendanceChart = ({ attendanceData }) => {
         <div>
           <h3 className="text-lg font-semibold text-gray-900">Attendance Analytics</h3>
           <p className="text-sm text-gray-600">
-            {chartData.startDate} - {chartData.endDate} ({chartData.totalDays} count)
+            {chartData?.startDate} - {chartData?.endDate} ({chartData?.totalDays} count)
           </p>
         </div>
         <DateFilter value={dateRange} onChange={setDateRange} />
@@ -135,7 +134,7 @@ const AttendanceChart = ({ attendanceData }) => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-green-800">Present Days</p>
-              <p className="text-2xl font-bold text-green-900">{chartData.presentDays}</p>
+              <p className="text-2xl font-bold text-green-900">{chartData?.presentDays}</p>
             </div>
             <div className="p-2 bg-green-600 rounded-lg">
               <Users className="w-5 h-5 text-white" />
@@ -147,7 +146,7 @@ const AttendanceChart = ({ attendanceData }) => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-red-800">Absent Days</p>
-              <p className="text-2xl font-bold text-red-900">{chartData.absentDays}</p>
+              <p className="text-2xl font-bold text-red-900">{chartData?.absentDays}</p>
             </div>
             <div className="p-2 bg-red-600 rounded-lg">
               <Calendar className="w-5 h-5 text-white" />
@@ -159,7 +158,7 @@ const AttendanceChart = ({ attendanceData }) => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-blue-800">Attendance Rate</p>
-              <p className="text-2xl font-bold text-blue-900">{attendanceRate}%</p>
+              <p className="text-2xl font-bold text-blue-900">{attendanceRate || "0.0"}%</p>
             </div>
             <div className="p-2 bg-blue-600 rounded-lg">
               <TrendingUp className="w-5 h-5 text-white" />
@@ -178,7 +177,7 @@ const AttendanceChart = ({ attendanceData }) => {
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
-                  data={chartData.pieData}
+                  data={chartData?.pieData}
                   cx="50%"
                   cy="50%"
                   labelLine={false}
@@ -187,7 +186,7 @@ const AttendanceChart = ({ attendanceData }) => {
                   fill="#8884d8"
                   dataKey="value"
                 >
-                  {chartData.pieData.map((entry, index) => (
+                  {chartData?.pieData?.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={getStatusColor(entry.status)} />
                   ))}
                 </Pie>

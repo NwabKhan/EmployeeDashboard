@@ -1,10 +1,9 @@
 import React from 'react';
 import { TrendingUp, Award, User, Star, Calendar, Target, BarChart3 } from 'lucide-react';
-import { Loader } from '../ui';
 
 const PerformanceReviewSummary = ({ reviewsData }) => {
   if (!reviewsData || reviewsData.length === 0) {
-    return <Loader />;
+    return "No Data Found";
   }
 
   const getRatingColor = (rating) => {

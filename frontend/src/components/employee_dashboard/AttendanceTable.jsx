@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Search, Filter, ChevronLeft, ChevronRight } from 'lucide-react';
-import { DateFilter, Loader } from '../ui';
+import { DateFilter } from '../ui';
 
 
 const PAGE_SIZE_OPTIONS = [5, 10, 15, 20, 30];
@@ -119,7 +119,7 @@ const AttendanceTable = ({ attendanceData }) => {
 
   if (!attendanceData) {
     return (
-      <Loader />
+      "No Data Found"
     );
   }
 

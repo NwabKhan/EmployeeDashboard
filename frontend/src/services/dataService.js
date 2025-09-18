@@ -12,18 +12,6 @@ export const dataService = {
       return await response.json();
     } catch (error) {
       console.error('Error loading employee profile:', error);
-      // Return fallback data
-      return {
-        id: "emp-1024",
-        name: "Ayesha Khan",
-        role: "Frontend Engineer",
-        department: "Engineering",
-        phone: "+923001112223",
-        email: "ayesha.khan@example.com",
-        avatarUrl: "https://i.pravatar.cc/150?img=47",
-        location: "Karachi",
-        joinedOn: "2022-03-14"
-      };
     }
   },
 
@@ -37,7 +25,6 @@ export const dataService = {
       return await response.json();
     } catch (error) {
       console.error('Error loading attendance data:', error);
-      // Return empty array as fallback
       return [];
     }
   },
@@ -52,7 +39,6 @@ export const dataService = {
       return await response.json();
     } catch (error) {
       console.error('Error loading performance reviews:', error);
-      // Return empty array as fallback
       return [];
     }
   },
