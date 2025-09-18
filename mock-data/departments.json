@@ -1,0 +1,26 @@
+[
+  {
+    "id": "eng",
+    "name": "Engineering"
+  },
+  {
+    "id": "hr",
+    "name": "Human Resources"
+  },
+  {
+    "id": "fin",
+    "name": "Finance"
+  },
+  {
+    "id": "ops",
+    "name": "Operations"
+  },
+  {
+    "id": "sales",
+    "name": "Sales"
+  },
+  {
+    "id": "mkt",
+    "name": "Marketing"
+  }
+]

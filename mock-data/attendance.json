@@ -1,0 +1,212 @@
+[
+  {
+    "date": "2025-08-07",
+    "checkIn": "09:12",
+    "checkOut": "18:02",
+    "totalMinutes": 530,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-08",
+    "checkIn": "09:05",
+    "checkOut": "17:44",
+    "totalMinutes": 519,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-09",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "weekend"
+  },
+  {
+    "date": "2025-08-10",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "weekend"
+  },
+  {
+    "date": "2025-08-11",
+    "checkIn": "09:28",
+    "checkOut": "18:10",
+    "totalMinutes": 522,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-12",
+    "checkIn": "09:36",
+    "checkOut": "17:10",
+    "totalMinutes": 454,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-13",
+    "checkIn": "10:02",
+    "checkOut": "18:30",
+    "totalMinutes": 508,
+    "status": "late"
+  },
+  {
+    "date": "2025-08-14",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "leave"
+  },
+  {
+    "date": "2025-08-15",
+    "checkIn": "09:18",
+    "checkOut": "17:55",
+    "totalMinutes": 517,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-16",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "weekend"
+  },
+  {
+    "date": "2025-08-17",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "weekend"
+  },
+  {
+    "date": "2025-08-18",
+    "checkIn": "09:07",
+    "checkOut": "18:11",
+    "totalMinutes": 544,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-19",
+    "checkIn": "09:53",
+    "checkOut": "18:05",
+    "totalMinutes": 492,
+    "status": "late"
+  },
+  {
+    "date": "2025-08-20",
+    "checkIn": "09:21",
+    "checkOut": "18:03",
+    "totalMinutes": 522,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-21",
+    "checkIn": "09:14",
+    "checkOut": "17:50",
+    "totalMinutes": 516,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-22",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "absent"
+  },
+  {
+    "date": "2025-08-23",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "weekend"
+  },
+  {
+    "date": "2025-08-24",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "weekend"
+  },
+  {
+    "date": "2025-08-25",
+    "checkIn": "09:00",
+    "checkOut": "18:20",
+    "totalMinutes": 560,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-26",
+    "checkIn": "09:33",
+    "checkOut": "18:00",
+    "totalMinutes": 507,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-27",
+    "checkIn": "09:45",
+    "checkOut": "18:18",
+    "totalMinutes": 513,
+    "status": "late"
+  },
+  {
+    "date": "2025-08-28",
+    "checkIn": "09:09",
+    "checkOut": "17:40",
+    "totalMinutes": 511,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-29",
+    "checkIn": "09:22",
+    "checkOut": "18:07",
+    "totalMinutes": 525,
+    "status": "present"
+  },
+  {
+    "date": "2025-08-30",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "weekend"
+  },
+  {
+    "date": "2025-08-31",
+    "checkIn": null,
+    "checkOut": null,
+    "totalMinutes": 0,
+    "status": "weekend"
+  },
+  {
+    "date": "2025-09-01",
+    "checkIn": "09:30",
+    "checkOut": "18:00",
+    "totalMinutes": 510,
+    "status": "present"
+  },
+  {
+    "date": "2025-09-02",
+    "checkIn": "09:11",
+    "checkOut": "17:55",
+    "totalMinutes": 524,
+    "status": "present"
+  },
+  {
+    "date": "2025-09-03",
+    "checkIn": "10:05",
+    "checkOut": "18:12",
+    "totalMinutes": 487,
+    "status": "late"
+  },
+  {
+    "date": "2025-09-04",
+    "checkIn": "09:06",
+    "checkOut": "18:04",
+    "totalMinutes": 538,
+    "status": "present"
+  },
+  {
+    "date": "2025-09-05",
+    "checkIn": "09:18",
+    "checkOut": "17:59",
+    "totalMinutes": 521,
+    "status": "present"
+  }
+]

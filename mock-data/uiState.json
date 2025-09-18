@@ -1,0 +1,17 @@
+{
+  "loading": {
+    "profile": false,
+    "attendance": false,
+    "performance": false
+  },
+  "errors": {
+    "profile": null,
+    "attendance": null,
+    "performance": null
+  },
+  "filters": {
+    "attendanceSearch": "",
+    "status": "all"
+  },
+  "theme": "system"
+}
