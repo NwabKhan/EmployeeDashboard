@@ -1,0 +1,11 @@
+{
+  "id": "emp-1024",
+  "name": "Ayesha Khan",
+  "role": "Frontend Engineer",
+  "department": "Engineering",
+  "phone": "+923001112223",
+  "email": "ayesha.khan@example.com",
+  "avatarUrl": "https://i.pravatar.cc/150?img=47",
+  "location": "Karachi",
+  "joinedOn": "2022-03-14"
+}

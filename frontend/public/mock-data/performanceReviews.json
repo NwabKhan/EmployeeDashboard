@@ -1,0 +1,23 @@
+[
+  {
+    "id": "pr-2024q4",
+    "period": "2024 Q4",
+    "score": 4.3,
+    "rating": "green",
+    "reviewer": "Engineering Manager"
+  },
+  {
+    "id": "pr-2025q1",
+    "period": "2025 Q1",
+    "score": 3.6,
+    "rating": "yellow",
+    "reviewer": "Engineering Manager"
+  },
+  {
+    "id": "pr-2025q2",
+    "period": "2025 Q2",
+    "score": 4.7,
+    "rating": "green",
+    "reviewer": "Director of Engineering"
+  }
+]
