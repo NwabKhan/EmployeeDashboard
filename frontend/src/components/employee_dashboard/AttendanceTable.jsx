@@ -10,7 +10,7 @@ const AttendanceTable = ({ attendanceData }) => {
   const [statusFilter, setStatusFilter] = useState('all');
   const [sortBy, setSortBy] = useState('date');
   const [sortOrder, setSortOrder] = useState('desc');
-  const [datePreset, setDatePreset] = useState('all');
+  const [datePreset, setDatePreset] = useState('30');
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
 

@@ -3,7 +3,6 @@ import { Calendar } from 'lucide-react';
 
 const DateFilter = ({ value, onChange, className = '' }) => {
   const options = [
-    { value: 'all', label: 'All Time' },
     { value: '7', label: 'Last 7 Days' },
     { value: '30', label: 'Last 30 Days' },
     { value: '90', label: 'Last 90 Days' },

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { dataService } from '../services/dataService';
 
 import { Loader, ErrorState, Header, Section } from '../components/ui';
-import { ProfileCard, PerformanceReviewSummary, AttendanceTable } from '../components/employee_dashboard';
+import { ProfileCard, PerformanceReviewSummary, AttendanceTable, ProfileEditForm, AttendanceChart } from '../components/employee_dashboard';
 
 const EmployeeDashboard = () => {
     const [dashboardData, setDashboardData] = useState({
@@ -12,6 +12,7 @@ const EmployeeDashboard = () => {
     });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [isEditingProfile, setIsEditingProfile] = useState(false);
 
     const loadDashboardData = async () => {
         try {
@@ -30,6 +31,21 @@ const EmployeeDashboard = () => {
     useEffect(() => {
         loadDashboardData();
     }, []);
+
+    const handleProfileUpdate = (updatedProfile) => {
+        setDashboardData(prev => ({
+            ...prev,
+            profile: updatedProfile
+        }));
+    };
+
+    const handleEditProfile = () => {
+        setIsEditingProfile(true);
+    };
+
+    const handleCancelEdit = () => {
+        setIsEditingProfile(false);
+    };
 
     if (loading) {
         return <Loader />;
@@ -51,12 +67,27 @@ const EmployeeDashboard = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div className="lg:col-span-1">
-                        <Section title="Employee Profile" collapsible={false}>
-                            <ProfileCard profile={dashboardData.profile} />
-                        </Section>
+                        {isEditingProfile ? (
+                            <ProfileEditForm
+                                profile={dashboardData.profile}
+                                onUpdate={handleProfileUpdate}
+                                onCancel={handleCancelEdit}
+                            />
+                        ) : (
+                            <Section title="Employee Profile" collapsible={false}>
+                                <ProfileCard 
+                                    profile={dashboardData.profile} 
+                                    onEdit={handleEditProfile}
+                                />
+                            </Section>
+                        )}
                     </div>
 
                     <div className="lg:col-span-2 space-y-6">
+                        <Section title="Attendance Visualization" defaultOpen>
+                            <AttendanceChart attendanceData={dashboardData.attendance} />
+                        </Section>
+
                         <Section title="Attendance History" defaultOpen>
                             <AttendanceTable attendanceData={dashboardData.attendance} />
                         </Section>
